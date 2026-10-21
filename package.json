@@ -1,0 +1,17 @@
+{
+  "name": "scenesense-root",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SceneSense - AI-Powered Contextual Viewing Assistant",
+  "scripts": {
+    "dev": "concurrently -k -n \"SERVER,CLIENT\" -c \"cyan.bold,green.bold\" \"npm.cmd --prefix server run dev\" \"npm.cmd --prefix client run dev\"",
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
+    "build": "npm --prefix server run build && npm --prefix client run build",
+    "test": "npm --prefix server run test && npm --prefix client run test",
+    "start:server": "npm --prefix server run dev",
+    "start:client": "npm --prefix client run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
